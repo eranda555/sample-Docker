@@ -1,0 +1,43 @@
+docker ------>
+	
+	1 step == make a docker file
+	2 step == make a docker image
+	3 step == run the docker image
+
+docker file---------------
+	
+	create a docker file - dockerfile
+	
+			#base image
+			FROM node:20-alpine
+			
+			#working directory
+			WORKDIR /app
+	
+			#copy the file/source code of user program or app
+			COPY .(source of the location) .(where the code copy)
+
+			#run the app or code
+			CMD ["node", "index.js"]
+
+
+
+
+
+
+commands------------------------------------>
+
+	1.create an docker image using the docker file
+		docker build -t image_name
+
+	2.to see all the images
+		docker images
+
+	3.to create a container from that image
+		docker run -name name_of_theContainer inamge_name
+		
+	4.to see all the running containers
+		docker ps
+
+	5.to see all the containers
+		dockers ps -a
